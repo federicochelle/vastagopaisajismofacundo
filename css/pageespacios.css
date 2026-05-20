@@ -2,10 +2,15 @@
    ESPACIOS — estilos page
    (pensado para heredar tu librería: container, btn, services-head)
 ========================= */
-main {
+.spaces-page {
   padding-top: 4rem;
 }
-/* Hero usa tu sistema actual. Solo ajustamos la imagen */
+
+/*
+  Legacy:
+  este bloque pertenecía a un hero previo hoy comentado en `espacios.html`.
+  Se mantiene temporalmente porque es específico de la página y no rompe nada.
+*/
 .sp-hero .sp-hero-media {
   background-image: url("../assets/hero.png"); /* cambiá por una imagen editorial de espacios */
 }
@@ -14,6 +19,12 @@ main {
 .sp-index {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+/* Intro de página: mantiene el aire natural de una cabecera */
+.sp-intro {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .sp-pills {
@@ -64,7 +75,7 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -124,8 +135,13 @@ main {
 .sp-cta-box {
   border: 1px solid var(--color-border);
   padding: clamp(1.25rem, 3vw, 2rem);
-  background: rgba(255, 255, 255, 0.42);
-  backdrop-filter: blur(8px);
+  background-color: rgba(31, 77, 58, 0.05);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(31, 77, 58, 0.03) 100%
+  );
+  box-shadow: var(--shadow-sm);
   display: grid;
   gap: 1rem;
   align-items: center;

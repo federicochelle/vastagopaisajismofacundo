@@ -27,14 +27,10 @@
   <!-- Theme color (móvil) -->
   <meta name="theme-color" content="#0f2a1d" />
 
-  <!-- =========================
-       FAVICONS (ideal)
-       Generá set en realfavicongenerator.net
-  ========================== -->
-  <link rel="icon" href="assets/favicon.ico" sizes="any" />
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="manifest" href="assets/site.webmanifest" />
+  <!-- Imagen crítica del hero -->
+  <link rel="preload" as="image" href="assets/hero.jpg" />
+
+  <!-- Favicons pendientes: evitar 404 hasta generar los assets reales -->
 
   <!-- =========================
        OPEN GRAPH (Facebook/WhatsApp/LinkedIn)
@@ -82,16 +78,16 @@
 </head>
   <body id="top">
     <!-- Header -->
-<header class="site-header" id="top">
-  <div class="container flex flex-between flex-wrap header-inner">
+<header class="site-header">
+  <div class="container container-wide flex flex-between flex-wrap header-inner">
     <!-- Brand -->
     <a class="brand brand-logo-only" href="#top" aria-label="Vástago Paisaje – Ir al inicio">
       <img
         class="brand-logo"
         src="assets/logoo.png"
         alt="Vástago Paisaje"
-        width="44"
-        height="44"
+        width="240"
+        height="178"
         loading="eager"
       />
         <span class="brand-text">
@@ -103,10 +99,9 @@
 
     <!-- Nav desktop -->
     <nav class="nav nav-desktop" aria-label="Navegación principal">
-      <a class="nav-link" href="espacios.html">Proyectos</a>
       <a class="nav-link" href="servicios.html">Servicios</a>
-      <a class="nav-link" href="#estudio">Estudio</a>
-      <a class="nav-link" href="#contacto">Contacto</a>
+      <a class="nav-link" href="espacios.html">Espacios</a>
+      <a class="nav-link" href="index.html#contacto">Contacto</a>
 
       <!-- CTA principal -->
       
@@ -116,7 +111,7 @@
         class="btn btn-primary"
         href="https://www.instagram.com/vastago.paisajismo/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         aria-label="Instagram de Vástago Paisaje"
         title="Instagram"
       >
@@ -160,10 +155,9 @@
   <!-- Menú mobile -->
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav class="nav nav-mobile" aria-label="Menú móvil">
-      <a class="nav-link" href="espacios.html" data-menu-close>Proyectos</a>
       <a class="nav-link" href="servicios.html" data-menu-close>Servicios</a>
-      <a class="nav-link" href="#estudio" data-menu-close>Estudio</a>
-      <a class="nav-link" href="#contacto" data-menu-close>Contacto</a>
+      <a class="nav-link" href="espacios.html" data-menu-close>Espacios</a>
+      <a class="nav-link" href="index.html#contacto" data-menu-close>Contacto</a>
 
       
 
@@ -171,7 +165,7 @@
         class="btn btn-primary"
         href="https://www.instagram.com/vastago.paisajismo/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         data-menu-close
       >
         <svg
@@ -197,7 +191,7 @@
     </nav>
   </div>
 </header>
-<main>
+<main class="home-page">
       <section id="hero" class="section hero hero-image relative">
         <!-- Imagen de fondo -->
         <div class="hero-media" aria-hidden="true"></div>
@@ -235,78 +229,97 @@
             <!-- 1 -->
             <article class="project">
               <a href="espacios.html" class="project">
-              <div class="project-media">
-                <img
-                  src="assets/foto4.webp"
-                  alt="Balcones urbanos"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-overlay">
-                <p class="project-name">Balcones urbanos</p>
-              </div></a>
+                <div class="project-media">
+                  <img
+                    src="assets/foto4.webp"
+                    alt="Balcones urbanos"
+                    width="984"
+                    height="1475"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-overlay">
+                  <p class="project-name">Balcones urbanos</p>
+                </div>
+              </a>
             </article>
 
             <!-- 2 -->
             <article class="project">
               <a href="espacios.html" class="project">
-              <div class="project-media">
-                <img
-                  src="assets/foto7.webp"
-                  alt="Terrazas y azoteas"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-overlay">
-                <p class="project-name">Azoteas</p>
-              </div></a>
+                <div class="project-media">
+                  <img
+                    src="assets/foto7.webp"
+                    alt="Terrazas y azoteas"
+                    width="768"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-overlay">
+                  <p class="project-name">Azoteas</p>
+                </div>
+              </a>
             </article>
 
             <!-- 3 -->
             <article class="project">
               <a href="espacios.html" class="project">
-              <div class="project-media">
-                <img
-                  src="assets/foto2.webp"
-                  alt="Patios residenciales"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-overlay">
-                <p class="project-name">Patios residenciales</p>
-              </div></a>
+                <div class="project-media">
+                  <img
+                    src="assets/foto2.webp"
+                    alt="Patios residenciales"
+                    width="1067"
+                    height="1600"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-overlay">
+                  <p class="project-name">Patios residenciales</p>
+                </div>
+              </a>
             </article>
 
             <!-- 4 -->
             <article class="project project-large">
-              <a href="espacios.html" class="project">
-              <div class="project-media">
-                <img
-                  src="assets/foto8.webp"
-                  alt="Jardines de mayor escala"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-overlay">
-                <p class="project-name">Jardines</p>
-              </div>
+              <a href="espacios.html" class="project project-large">
+                <div class="project-media">
+                  <img
+                    src="assets/foto8.webp"
+                    alt="Jardines de mayor escala"
+                    width="1024"
+                    height="1536"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-overlay">
+                  <p class="project-name">Jardines</p>
+                </div>
               </a>
             </article>
 
             <!-- 5 -->
             <article class="project project-large">
-              <a href="espacios.html" class="project">
-              <div class="project-media">
-                <img
-                  src="assets/milgenial.jpeg"
-                  alt="Comercios e interiores verdes"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project-overlay">
-                <p class="project-name">Locales comerciales</p>
-              </div>
-            </article></a>
+              <a href="espacios.html" class="project project-large">
+                <div class="project-media">
+                  <img
+                    src="assets/milgenial.jpeg"
+                    alt="Comercios e interiores verdes"
+                    width="1170"
+                    height="1359"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="project-overlay">
+                  <p class="project-name">Locales comerciales</p>
+                </div>
+              </a>
+            </article>
           </div>
         </div>
       </section>
@@ -327,7 +340,7 @@
 
           <div class="services-cards">
             <!-- 1 -->
-            <a class="service-card" href="servicio-diseno.html">
+            <a class="service-card" href="servicios.html#diseno">
               <div class="service-icon" aria-hidden="true">
                 <!-- Leaf -->
                 <svg viewBox="0 0 24 24" fill="none">
@@ -355,7 +368,7 @@
             </a>
 
             <!-- 2 -->
-            <a class="service-card" href="servicio-asesoramiento.html">
+            <a class="service-card" href="servicios.html#asesoramiento">
               <div class="service-icon" aria-hidden="true">
                 <!-- Compass -->
                 <svg viewBox="0 0 24 24" fill="none">
@@ -381,7 +394,7 @@
             </a>
 
             <!-- 3 -->
-            <a class="service-card" href="servicio-instalacion.html">
+            <a class="service-card" href="servicios.html#instalacion">
               <div class="service-icon" aria-hidden="true">
                 <!-- Tools -->
                 <svg viewBox="0 0 24 24" fill="none">
@@ -402,7 +415,7 @@
             </a>
 
             <!-- 4 -->
-            <a class="service-card" href="servicio-mantenimiento.html">
+            <a class="service-card" href="servicios.html#mantenimiento">
               <div class="service-icon" aria-hidden="true">
                 <!-- Calendar -->
                 <svg viewBox="0 0 24 24" fill="none">
@@ -448,7 +461,10 @@
             <img
               src="assets/maiz.png"
               alt="Vegetación en detalle, textura natural"
+              width="838"
+              height="631"
               loading="lazy"
+              decoding="async"
             />
           </figure>
 
@@ -490,7 +506,8 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
     </header>
 
     <!-- Form -->
-    <form class="contact-form" action="" method="post">
+    <!-- Formulario visual sin integración de envío todavía. -->
+    <form class="contact-form" action="#contacto" method="post">
       <!-- 2 columnas -->
       <div class="contact-fields">
         <div class="field">
@@ -572,7 +589,14 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
 
       <!-- LOGO -->
       <a href="index.html" class="footer-logo">
-        <img src="assets/logoblanco.png" alt="Vástago Paisaje" />
+        <img
+          src="assets/logoblanco.png"
+          alt="Vástago Paisaje"
+          width="232"
+          height="240"
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <p class="footer-text">
@@ -586,10 +610,11 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
     <div class="footer-col">
       <p class="footer-kicker">Explorar</p>
       <ul class="footer-links">
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#estudio">Estudio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="#estudio">Estudio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="espacios.html">Espacios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
     </div>
 
@@ -599,7 +624,7 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
       <ul class="footer-links">
         <li>
           <a href="mailto:hola@vastagopaisaje.com">
-           
+            hola@vastagopaisaje.com
           </a>
         </li>
 
@@ -613,8 +638,8 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
          
         </li>
         <li>
-           <a href="tel:+59898547398">
-            Martin +598 98 547 398
+           <a href="tel:+59889734238">
+            Felipe +598 89 734 238
           </a>
         </li>
       </ul>
@@ -634,7 +659,7 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
 <a
     href="https://wa.me/59899888816?text=Hola%20V%C3%A1stago%20Paisaje!%20Quiero%20coordinar%20una%20consulta%20para%20mi%20espacio%20verde."  class="whatsapp-sticky"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
     >
       <svg
@@ -659,6 +684,6 @@ Cada proyecto es una oportunidad de crear atmósferas que acompañen el habitar,
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-<script src="js/app.js"></script>
+<script src="js/app.js" defer></script>
   </body>
 </html>

@@ -1,9 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vástago Paisaje | Servicios de paisajismo en Montevideo, Canelones y Maldonado</title>
+    <meta
+      name="description"
+      content="Conocé los servicios de Vástago Paisaje: diseño de espacios verdes, asesoramiento, instalación y mantenimiento en Montevideo, Canelones y Maldonado."
+    />
+    <link rel="canonical" href="https://vastagopaisaje.com/servicios.html" />
+    <meta property="og:site_name" content="Vástago Paisaje" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vastagopaisaje.com/servicios.html" />
+    <meta property="og:title" content="Vástago Paisaje | Servicios de paisajismo" />
+    <meta
+      property="og:description"
+      content="Diseño, asesoramiento, instalación y mantenimiento de espacios verdes con una mirada sensible y funcional."
+    />
+    <meta property="og:image" content="https://vastagopaisaje.com/assets/maiz.png" />
+    <meta property="og:image:alt" content="Vástago Paisaje — servicios de paisajismo" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -15,16 +30,16 @@
   </head>
   <body id="top">
       <!-- Header -->
-<header class="site-header" id="top">
-  <div class="container flex flex-between flex-wrap header-inner">
+<header class="site-header">
+  <div class="container container-wide flex flex-between flex-wrap header-inner">
     <!-- Brand -->
-    <a class="brand brand-logo-only" href="#top" aria-label="Vástago Paisaje – Ir al inicio">
+    <a class="brand brand-logo-only" href="index.html" aria-label="Vástago Paisaje – Ir al inicio">
       <img
         class="brand-logo"
         src="assets/logoo.png"
         alt="Vástago Paisaje"
-        width="44"
-        height="44"
+        width="240"
+        height="178"
         loading="eager"
       />
       
@@ -36,10 +51,9 @@
 
     <!-- Nav desktop -->
     <nav class="nav nav-desktop" aria-label="Navegación principal">
-        <a class="nav-link" href="index.html">Inicio</a>
-      <a class="nav-link" href="espacios.html">Proyectos</a>
-      <a class="nav-link" href="index.html">Estudio</a>
-      <a class="nav-link" href="index.html">Contacto</a>
+      <a class="nav-link" href="servicios.html" aria-current="page">Servicios</a>
+      <a class="nav-link" href="espacios.html">Espacios</a>
+      <a class="nav-link" href="index.html#contacto">Contacto</a>
 
       <!-- CTA principal -->
       
@@ -47,9 +61,9 @@
       <!-- Link secundario -->
       <a
         class="btn btn-primary"
-        href="https://www.instagram.com/tu_instagram/"
+        href="https://www.instagram.com/vastago.paisajismo/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         aria-label="Instagram de Vástago Paisaje"
         title="Instagram"
       >
@@ -93,19 +107,17 @@
   <!-- Menú mobile -->
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav class="nav nav-mobile" aria-label="Menú móvil">
-        <a class="nav-link" href="index.html">Inicio</a>
-      <a class="nav-link" href="espacios.html" data-menu-close>Proyectos</a>
-      
-      <a class="nav-link" href="index.html" data-menu-close>Estudio</a>
-      <a class="nav-link" href="index.html" data-menu-close>Contacto</a>
+      <a class="nav-link" href="servicios.html" data-menu-close aria-current="page">Servicios</a>
+      <a class="nav-link" href="espacios.html" data-menu-close>Espacios</a>
+      <a class="nav-link" href="index.html#contacto" data-menu-close>Contacto</a>
 
       
 
       <a
         class="btn btn-primary"
-        href="https://www.instagram.com/tu_instagram/"
+        href="https://www.instagram.com/vastago.paisajismo/"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         data-menu-close
       >
         <svg
@@ -141,7 +153,15 @@
       <!-- SERVICES (alternado) -->
       <section class="section sp-services" aria-labelledby="sp-services-title">
         <div class="container container-wide stack-lg">
-          
+          <header class="services-head">
+            <p class="services-eyebrow">Servicios</p>
+            <h1 id="sp-services-title" class="services-title">
+              Paisajismo a medida, con criterio y detalle
+            </h1>
+            <p class="services-lead">
+              Diseñamos, instalamos y acompañamos espacios verdes adaptados a tu forma de habitar.
+            </p>
+          </header>
 
           
             <!-- 1 -->
@@ -154,13 +174,16 @@
                 <img
                   src="assets/foto9.webp"
                   alt="Diseño de espacios verdes: composición vegetal y zonificación"
+                  width="1000"
+                  height="750"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <div class="sp-service-content">
                 <header class="service-head">
-                  <h2 class="services-title">Diseño de espacios verdes</h2>
+                  <h2 id="s1-title" class="services-title">Diseño de espacios verdes</h2>
                   
                 </header>
 
@@ -209,13 +232,16 @@
                 <img
                   src="assets/foto10.webp"
                   alt="Asesoramiento personalizado: selección de especies y macetas"
+                  width="1170"
+                  height="1689"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <div class="sp-service-content">
                 <header class="sp-service-head">
-                  <h2 class="services-title">
+                  <h2 id="s2-title" class="services-title">
                     Asesoramiento personalizado
                   </h2>
                  
@@ -264,13 +290,16 @@
                 <img
                   src="assets/foto12.webp"
                   alt="Provisión e instalación: plantación y armado final"
+                  width="1200"
+                  height="1600"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <div class="sp-service-content">
                 <header class="sp-service-head">
-                  <h2 class="services-title">Provisión e instalación</h2>
+                  <h2 id="s3-title" class="services-title">Provisión e instalación</h2>
                   
                 </header>
 
@@ -317,13 +346,16 @@
                 <img
                   src="assets/foto1.webp"
                   alt="Mantenimiento y seguimiento: poda y ajustes estacionales"
+                  width="474"
+                  height="713"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <div class="sp-service-content">
                 <header class="sp-service-head">
-                  <h2 class="services-title">
+                  <h2 id="s4-title" class="services-title">
                     Mantenimiento y seguimiento
                   </h2>
                   
@@ -363,27 +395,36 @@
         </div>
       </section>
 
-      <!-- CTA / CONSULTA -->
+      <!-- CTA FINAL -->
       <section
         id="consulta"
         class="section sp-cta"
         aria-labelledby="sp-cta-title"
       >
-        <div class="container">
+        <div class="container container-wide">
           <div class="sp-cta-box">
             <div>
-              <h2 id="sp-cta-title" class="sp-h2">
-                ¿Tenés un proyecto en mente?
+              <p class="services-eyebrow">Contacto</p>
+              <h2 id="sp-cta-title" class="services-title">
+                ¿Querés definir el servicio ideal para tu espacio?
               </h2>
-              <p class="sp-muted">
-                Coordinemos una consulta y evaluamos tu espacio con criterio y
-                claridad.
+              <p class="services-lead">
+                Coordinemos una consulta y te orientamos con claridad sobre
+                diseño, instalación y mantenimiento según tu caso.
               </p>
             </div>
-            <a class="btn btn-primary" href="#contacto">Solicitar consulta</a>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/59899888816?text=Hola%20V%C3%A1stago%20Paisaje!%20Quiero%20coordinar%20una%20consulta."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Coordinar por WhatsApp
+            </a>
           </div>
         </div>
       </section>
+
     </main>
     <!-- FOOTER -->
 <footer class="footer">
@@ -394,7 +435,14 @@
 
       <!-- LOGO -->
       <a href="index.html" class="footer-logo">
-        <img src="assets/logoblanco.png" alt="Vástago Paisaje" />
+        <img
+          src="assets/logoblanco.png"
+          alt="Vástago Paisaje"
+          width="232"
+          height="240"
+          loading="lazy"
+          decoding="async"
+        />
       </a>
 
       <p class="footer-text">
@@ -408,10 +456,11 @@
     <div class="footer-col">
       <p class="footer-kicker">Explorar</p>
       <ul class="footer-links">
-        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#estudio">Estudio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="index.html">Estudio</a></li>
-        <li><a href="index.html">Contacto</a></li>
+        <li><a href="espacios.html">Espacios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
     </div>
 
@@ -421,7 +470,7 @@
       <ul class="footer-links">
         <li>
           <a href="mailto:hola@vastagopaisaje.com">
-            
+            hola@vastagopaisaje.com
           </a>
         </li>
 
@@ -435,10 +484,11 @@
          
         </li>
         <li>
-           <a href="tel:+59898547398">
-            Martin +598 98 547 398
+           <a href="tel:+59889734238">
+            Felipe +598 89 734 238
           </a>
         </li>
+      </ul>
     </div>
 
   </div>
@@ -455,7 +505,7 @@
 <a
      href="https://wa.me/59899888816?text=Hola%20V%C3%A1stago%20Paisaje!%20Quiero%20coordinar%20una%20consulta%20para%20mi%20espacio%20verde." class="whatsapp-sticky"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
     >
       <svg
@@ -480,7 +530,7 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-<script src="js/app.js"></script>
+<script src="js/app.js" defer></script>
 
   </body>
 </html>

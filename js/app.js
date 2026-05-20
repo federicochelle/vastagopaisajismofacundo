@@ -59,3 +59,30 @@ if (header && toggle && mobileMenu && overlay) {
     if (window.innerWidth > 900 && isOpen()) closeMenu();
   });
 }
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const revealTargets = document.querySelectorAll(
+  "main > .section:not(.hero), .services-page .sp-service"
+);
+
+if (!prefersReducedMotion.matches && revealTargets.length) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  revealTargets.forEach((target) => {
+    target.classList.add("js-reveal");
+    revealObserver.observe(target);
+  });
+}

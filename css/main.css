@@ -17,6 +17,12 @@
 /* =========================
    4. PAGES / SECTIONS (hero, landing)
 ========================= */
+/*
+  Nota:
+  `main.css` todavía importa estilos globales y estilos de secciones/páginas
+  en un único punto de entrada. Funciona bien para este sitio estático, pero
+  a futuro conviene separar mejor imports comunes vs imports por página.
+*/
 @import "hero.css";
 @import "proyectos.css";
 @import "servicios.css";

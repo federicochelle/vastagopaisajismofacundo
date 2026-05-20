@@ -2,7 +2,7 @@
    SERVICES PAGE (layout only)
    Compatible con tu librería
 ========================= */
-main {
+.services-page {
   padding-top: 4rem;
 }
 .services-page {
@@ -46,8 +46,6 @@ main {
   font-size: 1.05rem;
   line-height: 1.6;
   max-width: 42rem;
-}
-.sp-list {
   list-style: none;
   padding-left: 0;
 }
@@ -68,6 +66,12 @@ main {
   background: currentColor;
   opacity: 0.6;
 }
+
+/*
+  Legacy:
+  estos selectores pertenecen a una versión anterior con hero/mini-galería
+  que hoy no está renderizada en `servicios.html`.
+*/
 
 /* HERO IMAGE */
 .sp-hero-media {
@@ -98,6 +102,42 @@ main {
   display: grid;
   gap: 1.25rem;
   align-items: center;
+}
+
+/*
+  Ritmo visual por artículo:
+  alternamos tonos muy suaves en franjas de ancho completo
+  para separar mejor cada servicio sin efecto de card.
+*/
+.sp-service {
+  position: relative;
+  padding-block: clamp(1.6rem, 3vw, 2.4rem);
+  overflow: visible;
+}
+
+.sp-service::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.16);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  z-index: -1;
+}
+
+.sp-service:nth-of-type(even)::before {
+  background-color: rgba(31, 77, 58, 0.05);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(31, 77, 58, 0.03) 100%
+  );
 }
 
 .sp-service-media {
@@ -170,10 +210,24 @@ main {
   }
 }
 
+.services-page .sp-cta {
+  background: rgba(255, 255, 255, 0.72);
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.72);
+  padding-top: 0;
+  padding-bottom: clamp(2.7rem, 5vw, 4rem);
+}
+
+.services-page .sp-services {
+  padding-bottom: 0;
+}
+
 /* CTA box (sin botón personalizado) */
 .sp-cta-box {
   border: 1px solid var(--sp-border);
   padding: clamp(1.35rem, 2.5vw, 2rem);
+  background: transparent;
+  box-shadow: var(--shadow-sm);
   display: grid;
   gap: 1rem;
   align-items: center;

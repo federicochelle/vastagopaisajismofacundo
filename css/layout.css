@@ -31,6 +31,83 @@
   padding-block: var(--space-xl);
 }
 
+/*
+  Ritmo visual sutil entre secciones:
+  alternamos fondos apenas distintos para que cada bloque se perciba separado
+  sin cambiar la identidad general del sitio.
+*/
+main > .section {
+  position: relative;
+}
+
+main > .section:not(.hero):not(.contact--almas) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+main > .section:nth-of-type(even):not(.hero):not(.contact--almas) {
+  background-color: rgba(31, 77, 58, 0.05);
+}
+
+main > .section:nth-of-type(odd):not(.hero):not(.contact--almas) {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+}
+
+main > .section:nth-of-type(even):not(.hero):not(.contact--almas) {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(31, 77, 58, 0.03) 100%
+  );
+}
+
+/* Home: alternancia invertida */
+.home-page > .section:nth-of-type(odd):not(.hero):not(.contact--almas) {
+  background-color: rgba(31, 77, 58, 0.05);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(31, 77, 58, 0.03) 100%
+  );
+}
+
+.home-page > .section:nth-of-type(even):not(.hero):not(.contact--almas) {
+  background-color: rgba(255, 255, 255, 0.12);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+}
+
+/* Reveal al entrar en viewport */
+main > .section.js-reveal,
+.services-page .sp-service.js-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+main > .section.js-reveal.is-visible,
+.services-page .sp-service.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > .section.js-reveal,
+  .services-page .sp-service.js-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (max-width: 700px) {
   .section {
     padding-inline: 0;

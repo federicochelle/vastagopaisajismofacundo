@@ -140,7 +140,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
   text-decoration: underline;
 }
 
@@ -167,9 +167,12 @@ button {
   cursor: pointer;
 }
 
-section {
-  padding: var(--space-lg) 0;
-}
+/*
+  Nota:
+  El espaciado vertical del sitio vive en `.section` dentro de `layout.css`.
+  Evitamos aplicar padding a TODO `<section>` para reducir efectos secundarios
+  sobre páginas futuras o bloques que no usen la convención del proyecto.
+*/
 
 /* Focus accesible */
 :focus-visible {
