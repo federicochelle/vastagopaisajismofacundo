@@ -204,6 +204,10 @@
     gap: 2rem;
   }
 
+  .sp-cols > .sp-col:only-child {
+    grid-column: 1 / -1;
+  }
+
   .sp-mini-gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;

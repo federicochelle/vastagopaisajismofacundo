@@ -19,9 +19,9 @@
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/hero.jpg");
+  background-image: url("../assets/hero.jpeg");
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
   background-repeat: no-repeat;
   z-index: 0;
   transform: scale(1.02);
