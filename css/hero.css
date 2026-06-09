@@ -19,7 +19,7 @@
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("../assets/hero.jpeg");
+  background-image: url("../assets/hero.webp");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
