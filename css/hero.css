@@ -45,12 +45,15 @@
   min-height: clamp(520px, 75vh, 820px);
   display: grid;
   align-items: center;
+  justify-items: center;
   padding-block: clamp(3rem, 6vw, 5.5rem);
 }
 
 .hero-content {
   max-width: 700px;
   padding-top: 25vh;
+  text-align: center;
+  animation: hero-fade-in 900ms ease-out both;
 }
 
 /* Kicker */
@@ -65,12 +68,10 @@
   text-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  max-width: 55ch;
 }
 
 /* Lead */
 .hero-lead {
-  max-width: 55ch;
   font-size: 1.25rem;
   line-height: 1.45;
   margin: 0;
@@ -83,6 +84,7 @@
 /* Botones */
 .hero-actions {
   gap: 0.75rem;
+  justify-content: center;
 }
 
 /* Outline: que no “desaparezca” sobre la imagen */
@@ -94,6 +96,18 @@
 .hero-btn-outline:hover {
   background: rgba(15, 42, 29, 0.24);
   border-color: rgba(245, 247, 244, 0.5);
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Fade inferior (corregido: debajo del contenido) */
@@ -171,7 +185,6 @@
   .hero-lead {
     color: #fff;
     font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-    max-width: 32ch;
   }
 
   .hero-inner {
@@ -185,5 +198,11 @@
 
   .hero-actions {
     gap: 1rem; /* más separación */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content {
+    animation: none;
   }
 }

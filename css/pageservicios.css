@@ -145,7 +145,8 @@
   border: 1px solid var(--sp-border);
 }
 
-.sp-service-media img {
+.sp-service-media img,
+.sp-service-media video {
   width: 100%;
   height: auto;
   display: block;
