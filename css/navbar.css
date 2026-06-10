@@ -14,7 +14,7 @@
 }
 
 .header-inner {
-  padding-block: 0.9rem;
+  padding-block: 0.5rem;
   gap: var(--space-sm);
 }
 
@@ -24,8 +24,9 @@
 }
 
 .brand-logo {
-  width: 64px;
-  height: 44px;
+  width: auto;
+  height: 28px;
+  max-width: none;
   object-fit: contain;
 }
 
@@ -140,6 +141,14 @@
 ========================= */
 
 @media (max-width: 900px) {
+  .header-inner {
+    padding-block: 0.45rem;
+  }
+
+  .brand-logo {
+    height: 26px;
+  }
+
   .nav-desktop {
     display: none;
   }
