@@ -129,6 +129,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.82);
   color: var(--pg-green-dark);
   box-shadow: var(--shadow-sm);
@@ -140,14 +141,15 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.5rem 0.7rem;
-  background: rgba(15, 42, 29, 0.45);
-  backdrop-filter: blur(8px);
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .sp-carousel-dot {
   width: 0.7rem;
   height: 0.7rem;
+  border-radius: 999px;
   background: rgba(255, 255, 255, 0.45);
 }
 
