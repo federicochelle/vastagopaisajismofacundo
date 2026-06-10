@@ -132,7 +132,10 @@
 ========================= */
 @media (max-width: 760px) {
   .hero-title {
-    max-width: 70vw;
+    max-width: 100%;
+    font-size: clamp(2.1rem, 10vw, 2.8rem);
+    line-height: 1.02;
+    text-wrap: balance;
   }
   .hero-lead {
     color: #fff;
@@ -145,6 +148,7 @@
     padding-block: 3.5rem;
   }
   .hero-content {
+    width: 100%;
     max-width: 700px;
     padding-top: 20vh;
   }
